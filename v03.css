@@ -15,3 +15,31 @@
 @media(max-width:900px){.dv-grid{grid-template-columns:repeat(3,1fr)}.dv-story{grid-template-columns:1fr}.dv-visual{min-height:300px}.dv-dialogue{border-left:0;border-top:1px solid #9b774f}.dv-cover{background-position:55% center}}
 @media(max-width:540px){.dv-grid{grid-template-columns:repeat(2,1fr)}.dv-art{aspect-ratio:3/3}.dv-heading{font-size:90px}.dv-cover{align-items:end;padding-bottom:60px}.dv-title{font-size:42px}.dv-person .dv-info{padding:9px}.dv-person .dv-info strong{font-size:18px}.dv-visual{min-height:250px}}
 @media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+/* v0.4 ORIGINAL AMERICAN COMIC BOOK ART DIRECTION */
+:root{--gold:#ffe36a;--red:#e43f39;--cyan:#52cee0;--ink:#090b13}
+body{background:#090d16;background-image:radial-gradient(#f9de8612 1.25px,transparent 1.25px);background-size:7px 7px}
+.dv-shell{background:linear-gradient(135deg,#111b35,#0b111b)}
+.dv-top{background:#080c15;border-bottom:4px solid #000;box-shadow:0 4px 0 var(--gold)}
+.dv-logo,.dv-title,.dv-heading,.dv-info strong,.dv-btn,.dv-speaker{font-family:'Barlow Condensed',Impact,sans-serif;text-transform:uppercase;font-style:italic;letter-spacing:1.4px;text-shadow:2px 2px #000}
+.dv-heading{color:#fff4c7;-webkit-text-stroke:2px #080b12;text-shadow:5px 5px #070a10,9px 9px var(--red),14px 14px #06080f;transform:skew(-4deg)}
+.dv-heading span{color:#ff5f45}
+.dv-cover{background:linear-gradient(90deg,#100d23ee,#161d3477 68%,#120e2011),url('./assets/desert.svg') center/cover}
+.dv-cover:before{background:repeating-radial-gradient(circle at 78% 40%,#ffd36813 0 2px,#07090a0b 3px 7px),linear-gradient(125deg,#f54d4b42,#e9b34f17 60%);mix-blend-mode:normal}
+.dv-cover:after{height:13px;background:repeating-linear-gradient(110deg,#fddc68 0 26px,#0b0c14 26px 36px,#eb5049 36px 61px)}
+.dv-btn,.dv-choice,.dv-mini{border:3px solid #080b11;box-shadow:3px 3px 0 #d8ab5d;background:#18233b;color:#f9f2dc;transform:skew(-2deg)}
+.dv-primary{background:#ffe06a;color:#151321;box-shadow:4px 4px 0 #e34341}
+.dv-btn:hover,.dv-choice:hover{box-shadow:5px 5px 0 #ffda5b;background:#a73749;color:#fff}
+.dv-stage{background:radial-gradient(circle at 85% 0%,#dd513f4d,transparent 45%),radial-gradient(circle at 10% 100%,#4ccbdd2e,transparent 52%),#10192b}
+.dv-stage:before{background-image:radial-gradient(#fff4ca21 1px,transparent 1px);background-size:8px 8px;opacity:.3}
+.dv-person{border:4px solid #090a14;box-shadow:5px 5px 0 #e8b85f;border-radius:0;transform:rotate(-.7deg)}
+.dv-person:nth-child(even){transform:rotate(.7deg)}.dv-person:hover{transform:translateY(-8px) rotate(0deg);box-shadow:6px 6px 0 #ea4753}
+.dv-art{background:linear-gradient(135deg,var(--hue,#b75c44) 25%,#121c32 85%);filter:contrast(1.18) saturate(1.32)}
+.dv-art:before{content:"";position:absolute;z-index:2;inset:0;background:radial-gradient(#0c0c1a4a 1px,transparent 2px);background-size:6px 6px;mix-blend-mode:multiply;pointer-events:none}
+.dv-figure{filter:drop-shadow(7px 0 0 #080b13) drop-shadow(-3px -2px 0 #090a11)}
+.dv-artnum{font-size:50px;-webkit-text-stroke:1px #000;text-shadow:3px 3px #080b11}
+.dv-info{background:#0c1523;border-top:4px solid #0a0b11}.dv-info strong{color:#ffe08b;font-size:26px}
+.dv-story{border:5px solid #080c14;box-shadow:10px 10px 0 #e8b962;border-radius:0}.dv-visual{filter:saturate(1.3) contrast(1.1)}
+.dv-dialogue{background:linear-gradient(135deg,#19283b,#0e1528);border-left:5px solid #090d14}.dv-speaker{font-size:34px;color:#ffda66;-webkit-text-stroke:.4px #080c14}
+.dv-line{color:#fff8e8}.dv-stat{border:2px solid #090d15;box-shadow:3px 3px 0 #e5ad59;background:#15334a}
+.dv-modal{border:4px solid #080e17;box-shadow:9px 9px 0 #e6bf68;background:#152a3c}.dv-toast{border:3px solid #111;box-shadow:5px 5px 0 #e84c44}
+@media(max-width:900px){.dv-dialogue{border-left:0;border-top:5px solid #090d14}}
