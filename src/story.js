@@ -1,0 +1,17 @@
+export const actors=[["Adrian Vale","Chemical safety specialist"],["Lena Cross","Freight dispatcher"],["Mateo Rivas","Mechanic and courier"],["Naomi Price","Investigative journalist"],["Elias Mercer","Defense lawyer"],["Dara Solis","Municipal auditor"]];
+export const chapters=["Pressure","Contact","Expansion","Fracture","Collapse","Reckoning"];
+export const openings=[
+["My former supervisor is calling at midnight. He says the safety report needs a new signature.","The lab account has been emptied. Someone wants me to take the blame.","A truck unloads sealed containers at a condemned testing facility."],
+["That truck never arrived. Someone erased the dispatch record before sunrise.","My boss wants the manifest destroyed. The driver's family is asking questions.","The freight logs point to a warehouse that closed ten years ago."],
+["The customer left a metal case inside my garage. A stranger says he owns it.","The serial number leads to a missing vehicle. The customer offers double.","I recognize a voice in the security recording. It's someone I once trusted."],
+["An anonymous source says the city has been paying for shipments that never existed.","Someone sends me a map and a warning: do not take Route 16.","My editor refuses to publish the evidence. She looks frightened."],
+["My client wants a shipment ledger removed from discovery. He hasn't explained why.","The prosecution has only one witness. I suspect that witness is in danger.","A sealed envelope appears at my office with an offer I cannot ignore."],
+["An audit reveals a public contract funded by six shell companies.","The mayor's office calls before I've submitted my report.","The records show the same name on every questionable payment."]
+];
+export const choices=[
+[{label:"Take the offer",money:20,trust:-8,heat:12,flag:"accepted"},{label:"Demand proof",money:0,trust:4,heat:5,flag:"evidence"},{label:"Warn someone",money:-5,trust:12,heat:8,flag:"warned"}],
+[{label:"Share the evidence",money:0,trust:12,heat:9,flag:"ally"},{label:"Conceal what you know",money:16,trust:-8,heat:11,flag:"conceal"},{label:"Investigate quietly",money:-3,trust:4,heat:3,flag:"evidence"}],
+[{label:"Confront the contact",money:10,trust:-5,heat:14,flag:"confront"},{label:"Protect the witness",money:-5,trust:15,heat:6,flag:"witness"},{label:"Escape the meeting",money:0,trust:0,heat:-3,flag:"escape"}]
+];
+export const phoneThreads={unknown:["Don't take Route 16.","The dispatch log was altered at 02:17.","Someone inside city hall signed off on it."],mateo:["I saw the missing truck.","I think they followed me."],office:["You have a meeting scheduled for Friday.","Bring the original paperwork."]};
+export function ending(s){if(s.heat>=45)return ["The Fall","The investigation ends in an arrest."];if(s.trust>=80&&s.flags.includes("witness"))return ["The Witness","You protect the witness and expose the network."];if(s.money>=90&&s.trust<45)return ["The Empire","You gain power but lose those closest to you."];if(s.flags.includes("escape"))return ["The Ghost","You disappear before anyone can ask questions."];if(s.trust>=90)return ["Family First","You walk away from the network."];if(s.flags.includes("evidence")&&s.trust>=60)return ["Redemption","You deliver the truth and accept the consequences."];if(s.trust<25)return ["Betrayal","Your closest contact sells you out."];return ["The Clean Exit","You survive, but the mystery follows you."]}
