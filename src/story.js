@@ -1,4 +1,4 @@
-export const actors=[["Adrian Vale","Chemical safety specialist"],["Lena Cross","Freight dispatcher"],["Mateo Rivas","Mechanic and courier"],["Naomi Price","Investigative journalist"],["Elias Mercer","Defense lawyer"],["Dara Solis","Municipal auditor"]];
+export const actors=[["Warren Voss","Chemical safety specialist"],["Skye Mercer","Freight dispatcher"],["Jace Pruitt","Mechanic and courier"],["Nolan Price","Investigative journalist"],["Sol Varela","Defense lawyer"],["Harlan Reed","Municipal auditor"]];
 export const chapters=["Pressure","Contact","Expansion","Fracture","Collapse","Reckoning"];
 export const openings=[
 ["My former supervisor is calling at midnight. He says the safety report needs a new signature.","The lab account has been emptied. Someone wants me to take the blame.","A truck unloads sealed containers at a condemned testing facility."],
